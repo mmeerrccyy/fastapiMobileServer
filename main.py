@@ -6,7 +6,7 @@ load_dotenv()
 from fastapi import FastAPI
 from google.cloud import bigquery
 
-from query_collection import QUERY_ALL_TEAMS, QUERY_AMOUNT_DEVICES_PER_OS
+from query_collection import QUERY_ALL_TEAMS
 
 app = FastAPI()
 bg_client = bigquery.Client()
