@@ -1,12 +1,7 @@
-FROM = "ippt-tsd.phones_data.ukrainian-market-mobile-phones-data"
+FROM = "spry-cortex-385701.test_ds.test_table"
 
-QUERY_ALL_OS = f"""
-    SELECT DISTINCT os
+QUERY_ALL_TEAMS = f"""
+    SELECT Team, COUNT(*) amount
     FROM `{FROM}`
-"""
-
-QUERY_AMOUNT_DEVICES_PER_OS = f"""
-    SELECT os, COUNT(*) amount_devices
-    FROM `{FROM}`
-    GROUP BY os
+    GROUP BY Team
 """
